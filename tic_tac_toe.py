@@ -20,6 +20,9 @@ def get_field_size():
         if not all(i.isdigit() for i in size):
             print('Размерами поля должны быть числа!')
             continue
+        if int(size) < 1:
+            print(f'Размерами поля могут быть только положительные числа! {MAX_FIELD_SIZE}!')
+            continue
         if int(size) > MAX_FIELD_SIZE:
             print(f'Размеры поля должны быть не более {MAX_FIELD_SIZE}!')
             continue
@@ -39,7 +42,7 @@ def input_bot(fld, char):
         a, b = [randint(0, field_size - 1) for _ in '12']
         if fld[a][b] != '-':
             continue
-        print(f'Бот поставил "{char}" в координаты {a} {b}:')
+        print(f'Бот поставил "{char}" в поле с координатами {a} {b}:')
         break
     return a, b
 
@@ -79,7 +82,7 @@ def is_winner(fld, char):
 
     def check_rows():
         for row in fld:
-            if row == [char] * field_size:
+            if set(row) == set(char):
                 return True
         return False
 
@@ -122,7 +125,7 @@ while another_game == 'да':
             another_game = input('Чтобы сыграть еще раз введите "да": ').lower().strip()
             break
         total_moves += 1
-        if total_moves == field_size ** 2 + 1:
+        if total_moves == field_size ** 2:
             print_field(field)
             print('Ничья!!!')
             another_game = input('Чтобы сыграть еще раз введите "да": ').lower().strip()
