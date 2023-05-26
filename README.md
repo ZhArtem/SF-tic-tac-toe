@@ -11,3 +11,6 @@
 - Можно играть двумя игроками почереди или играть с ботом.
 - При выборе игры с ботом есть возможность выбрать за кем первый ход.      
               
+![](https://github.com/ZhArtem/SF-tic-tac-toe/assets/114347290/ceb4a3c3-21a6-4ffe-b400-28cd0fd91e48)
+![](https://github.com/ZhArtem/SF-tic-tac-toe/assets/114347290/423f296e-0a51-4c37-975e-01b1c90eaddc)
+![](https://github.com/ZhArtem/SF-tic-tac-toe/assets/114347290/2cb64f79-d14b-43fc-8328-55474ca1c2fc)
